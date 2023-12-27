@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int n,m,r,c;
     cin>>n>>m;
-    int arr[n][n]={0};
+    int arr[n][n]={};
     for(int i=0;i<m;i++){
         cin>>r>>c;
         arr[r-1][c-1]=1;
