@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 int main() {
     int arr[2][4];
@@ -13,21 +14,17 @@ int main() {
         b+=arr[1][j];
     }
     sum = a+b;
-    a/=4;
-    b/=4;
-    cout<<fixed;
-    cout.precision(1);
-    cout<<(double)a<<" "<<(double)b<<endl;
+    a=a/4.0;
+    b=b/4.0;
+    cout << fixed << setprecision(1)<<(double)a<<" "<<(double)b<<endl;
 
     for(int j=0;j<4;j++){
         a=0;
         a= arr[0][j]+arr[1][j];
-        a/=2;
+        a/=2.0;
         cout<< (double)a<<" ";
     } cout<<endl;
 
-    cout<<fixed;
-    cout.precision(1);
-    cout<<(double)sum/8<<endl;
+    cout << fixed << setprecision(1)<<(double)sum/8.0<<endl;
     return 0;
 }
