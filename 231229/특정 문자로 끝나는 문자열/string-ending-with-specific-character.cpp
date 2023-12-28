@@ -13,8 +13,9 @@ int main() {
         int n = arr[i].length();
         if(arr[i][n-1]==c){
             cout<<arr[i]<<endl;
+            found = true;
         }
-        found = true;
+        
     }
     if(!found){
         cout<<"None";
