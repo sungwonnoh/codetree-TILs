@@ -8,14 +8,16 @@ int main() {
         cin>>arr[i];
     }
     cin>>c;
+    bool found = false;
     for(int i=0;i<10;i++){
         int n = arr[i].length();
         if(arr[i][n-1]==c){
             cout<<arr[i]<<endl;
-        }else if(i==9){
-            cout<<"None";
         }
+        found = true;
     }
-    
+    if(!found){
+        cout<<"None";
+    }
     return 0;
 }
