@@ -6,16 +6,17 @@ int main() {
     string str1, str2;
     getline(cin, str1);
     getline(cin, str2);
-    for(int i=0;i<str1.length();i++){
-        if(str1[i]==' '){
-            str1.erase(i,1);
-        }
+
+    string result1;
+    for(char c1: str1){
+        if(c1 !=' ')
+            result1 +=c1;
     }
-    for(int i=0;i<str2.length();i++){
-        if(str2[i]==' '){
-            str2.erase(i,1);
-        }
+    string result2;
+    for(char c2: str2){
+        if(c2 !=' ')
+            result2 +=c2;
     }
-    cout<<str1<<str2;
+    cout<<result1<<result2;
     return 0;
 }
