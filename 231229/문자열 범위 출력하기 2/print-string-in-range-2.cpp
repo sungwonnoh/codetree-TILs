@@ -6,8 +6,14 @@ int main() {
     int n;
     cin>>str;
     cin>>n;
-    for(int i=str.length() -1;i>=(str.length()-n);i--){
-        cout<<str[i];
+    if(str.length()<n){
+        for(int i=str.length()-1;i>=0;i--){
+            cout<<str[i];
+        }
+    }else{
+        for(int i=str.length() -1;i>=(str.length()-n);i--){
+            cout<<str[i];
+        }
     }
     return 0;
 }
