@@ -6,7 +6,7 @@ int main() {
     int n;
     cin>>str;
     cin>>n;
-    if(str.length()<n){
+    if(str.length()<=n){
         for(int i=str.length()-1;i>=0;i--){
             cout<<str[i];
         }
