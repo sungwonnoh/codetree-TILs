@@ -19,6 +19,8 @@ void month(int n, int d){
         }else{
             cout<<"No";
         }
+    }else{
+        cout<<"No";
     }
 }
 int main() {
