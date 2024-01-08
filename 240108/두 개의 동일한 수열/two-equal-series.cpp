@@ -13,16 +13,22 @@ int main() {
     for(int i=0;i<n;i++){
         cin>>b[i];
     }
-    sort(a,a+n);
-    sort(b,b+n);
+
     bool isSame = true;
     for(int i=0;i<n;i++){
+        bool found = false;
         for(int j=0;j<n;j++){
-            if(a[i]!=b[j]){
-                isSame=false;
+            if(a[i]==b[j]){
+                found = true;
+                break;
             }
         }
+        if(!found){
+        isSame = false;
+        break;
+        }
     }
+    
     if(isSame==true){
         cout<<"Yes";
     }else{
