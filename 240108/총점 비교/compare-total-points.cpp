@@ -6,7 +6,6 @@ class Compare{
     public:
         string n;
         int a,b,c;
-        int sum = a+b+c;
         Compare(string n, int a, int b, int c){
             this->n=n;
             this->a=a;
@@ -16,7 +15,7 @@ class Compare{
         Compare(){}
 };
 bool cmp(Compare one, Compare two){
-    return one.sum>two.sum;
+    return one.a+one.b+one.c<two.a+two.b+two.c;
 }
 int main() {
     int n;
