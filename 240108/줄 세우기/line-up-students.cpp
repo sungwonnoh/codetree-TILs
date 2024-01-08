@@ -13,7 +13,11 @@ class Line{
 };
 bool cmp(Line a, Line b){
     if(a.h==b.h){
-        return a.w>b.w;
+        if(a.w==b.w){
+            return a.idx<b.idx;
+        }else{
+            return a.w>b.w;
+        } 
     }
     return a.h>b.h;
 }
@@ -24,12 +28,12 @@ int main() {
     for(int i=0;i<n;i++){
         int a,b,idx;
         cin>>a>>b;
-        idx = i+1;
+        idx = i;
         line[i]=Line(a,b,idx);
     }
     sort(line, line+n,cmp);
     for(int i=0;i<n;i++){
-        cout<<line[i].h<<" "<<line[i].w<<" "<<line[i].idx<<endl;
+        cout<<line[i].h<<" "<<line[i].w<<" "<<line[i].idx+1<<endl;
     }
     return 0;
 }
