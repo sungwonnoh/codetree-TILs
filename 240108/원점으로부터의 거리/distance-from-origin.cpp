@@ -14,9 +14,10 @@ class Point{
 };
 bool cmp(Point a, Point b){
     if(abs(a.x)+abs(a.y) == abs(b.x)+abs(b.y)){
-        return a.idx>b.idx;
+        return a.idx<b.idx;
+    }else{
+        return abs(a.x)+abs(a.y)>abs(b.x)+abs(b.y);
     }
-    return abs(a.x)+abs(a.y)>abs(b.x)+abs(b.y);
 }
 int main() {
     int n;
@@ -24,7 +25,7 @@ int main() {
     Point point[1000];
     for(int i=0;i<n;i++){
         int x,y,idx;
-        cin>>x,y;
+        cin>>x>>y;
         idx = i+1;
         point[i] = Point(x,y,idx);
     }
