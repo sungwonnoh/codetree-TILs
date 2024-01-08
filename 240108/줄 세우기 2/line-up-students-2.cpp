@@ -13,7 +13,7 @@ class Line{
 };
 bool cmp(Line a, Line b){
     if(a.h==b.h){
-        return a.w<b.w;
+        return a.w>b.w;
     }
     return a.h<b.h;
 }
