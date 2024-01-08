@@ -16,7 +16,7 @@ bool cmp(Point a, Point b){
     if(abs(a.x)+abs(a.y) == abs(b.x)+abs(b.y)){
         return a.idx<b.idx;
     }else{
-        return abs(a.x)+abs(a.y)>abs(b.x)+abs(b.y);
+        return abs(a.x)+abs(a.y)<abs(b.x)+abs(b.y);
     }
 }
 int main() {
