@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <iomanip>
 using namespace std;
 class Profile{
     public:
@@ -32,13 +33,13 @@ int main() {
     sort(pro, pro+5, n);
     cout<<"name"<<endl;
     for(int i=0;i<5;i++){
-        cout<<pro[i].name<<" "<<pro[i].h<<" "<<pro[i].w<<endl;
+        cout<<pro[i].name<<" "<<pro[i].h<<" "<<fixed << setprecision(1) <<pro[i].w<<endl;
     }
     cout<<endl;
     sort(pro,pro+5,height);
     cout<<"height"<<endl;
     for(int i=0;i<5;i++){
-        cout<<pro[i].name<<" "<<pro[i].h<<" "<<pro[i].w<<endl;
+        cout<<pro[i].name<<" "<<pro[i].h<<" "<<fixed << setprecision(1) <<pro[i].w<<endl;
     }
     return 0;
 }
