@@ -15,11 +15,11 @@ int main() {
     }
     sort(a,a+n);
     sort(b,b+n);
-    bool isSame = false;
+    bool isSame = true;
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
-            if(a[i]==b[j]){
-                isSame=true;
+            if(a[i]!=b[j]){
+                isSame=false;
             }
         }
     }
