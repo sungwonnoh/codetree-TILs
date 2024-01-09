@@ -26,7 +26,7 @@ int main() {
             idx = i+1;
         }
     }
-    result = (date + idx)/7;
+    result = (date + idx-1)/7 ;
     cout<<result;
     return 0;
 }
