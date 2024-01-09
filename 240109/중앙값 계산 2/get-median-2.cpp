@@ -9,12 +9,11 @@ int main() {
     for(int i=0;i<n;i++){
         cin>>arr[i];
         if(i%2==0){
-            sort(arr,arr+i);
-            idx = i/2;
+            sort(arr,arr+i+1);
+            idx = (i+1)/2;
             cout<<arr[idx]<<" ";
         }
     }
-    
 
     return 0;
 }
