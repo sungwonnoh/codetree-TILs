@@ -8,7 +8,7 @@ int main() {
     cin>>n>>b;
     
     while(true){
-        if(n<4){
+        if(n<4 ||n<8){
             change[cnt++]=n;
             break;
         }else{
