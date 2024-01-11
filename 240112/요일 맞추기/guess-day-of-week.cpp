@@ -18,6 +18,12 @@ int main() {
     }
     sum2+=d2;
     int idx=0;
+    idx= (sum2-sum1) %7;
+        if(idx<0){
+            idx+=7;
+        }
+        cout<<week[idx];    
+    /*
     if(m1<=m2){
         idx= (sum2-sum1) %7;
         if(idx<0){
@@ -31,5 +37,6 @@ int main() {
         }
         cout<<week[(7 - idx) % 7];
     }
+    */
     return 0;
 }
