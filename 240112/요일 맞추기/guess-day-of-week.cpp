@@ -29,7 +29,7 @@ int main() {
         if(idx<0){
             idx+=7;
         }
-        cout<<week[idx];
+        cout<<week[(7 - idx) % 7];
     }
     return 0;
 }
