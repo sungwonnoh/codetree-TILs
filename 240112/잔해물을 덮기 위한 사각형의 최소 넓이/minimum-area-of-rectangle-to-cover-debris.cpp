@@ -13,30 +13,33 @@ int main() {
         for(int j=x1;j<x2;j++){
             for(int k=y1;k<y2;k++){
                 arr[j][k]+=1;
-            }
-        }
-    }
-
-    for(int i=0;i<2;i++){
-        for(int j=x1;j<x2;j++){
-            for(int k=y1;k<y2;k++){
                 if(i==1&&arr[j][k]==1){
-                    arr[j][k]=0;
-                }else if(i==0&&arr[j][k]==2){
                     arr[j][k]=0;
                 }
             }
         }
-    }
+    } 
 
-    int cnt=0;
-    for(int i=0;i<2001;i++){
-        for(int j=0;j<2001;j++){
-            if(arr[i][j]>0){
-                cnt++;
-            } 
+    int min_x = 2000, min_y = 2000, max_x = 0, max_y = 0;
+
+    for (int i = 0; i <= 2000; i++) {
+        for (int j = 0; j <= 2000; j++) {
+            if (arr[i][j] == 1) {
+                max_x = max(max_x, i);
+                max_y = max(max_y, j);
+                min_x = min(min_x, i);
+                min_y = min(min_y, j);
+            }
         }
     }
-    cout<<cnt;
+    int area = 0;
+
+    if (min_x ==2000 && min_y ==2000 && max_x ==0 && max_y ==0) {
+        area = 0;
+    }else {
+        area = (max_x - min_x + 1) * (max_y - min_y + 1);
+    }
+
+    cout << area;
     return 0;
 }
