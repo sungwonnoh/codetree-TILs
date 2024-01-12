@@ -10,30 +10,30 @@ int main() {
     string week[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
     int num_of_days[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    int w1 = 0, w2 = 0;
-    for (int i = 1; i < m2; i++) {
-        w2 += num_of_days[i];
-    }
-    w2 += d2;
-    for (int i = 1; i < m1; i++) {
-        w1 += num_of_days[i];
-    }
-    w1 += d1;
-
-    int date = w2 - w1 + 1;
-    int result = 0, idx = 0;
-    for (int i = 0; i < 7; i++) {
-        if (a == week[i]) {
-            idx = i;
+    int arr[7]={1,0,0,0,0,0,0};
+    int i=0;
+    while(true){
+        if(m1==m2 && d1==d2){
+            break;
+        }
+        d1++;
+        i++;
+        if(i>=7){
+            i=0;
+        }
+        
+        arr[i]++;
+        if(d1>num_of_days[m1]){
+            m1++;
+            d1=1;
         }
     }
-
-    result = (date + idx - 1) / 7 ;
-    if (result == 0) {
-        result = 7;
+    int idx=0;
+    for(int i=0;i<7;i++){
+        if(a==week[i]){
+            idx =i;
+        }
     }
-
-    cout << result;
-
+    cout<<arr[idx];
     return 0;
 }
