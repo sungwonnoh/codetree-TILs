@@ -19,14 +19,19 @@ int main() {
         w1 +=num_of_days[i];
     }
     w1+=d1;
-    int date = w2-w1+1;
+    int date = w2-w1;
     int result=0,idx=0;
     for(int i=0;i<7;i++){
         if(a==week[i]){
-            idx = i+1;
+            idx = i;
         }
     }
-    result = (date + idx)%7 ;
+    
+    result = (date + idx)/7 ;
+    if(result ==0){
+        result =7;
+    }
     cout<<result;
+    
     return 0;
 }
