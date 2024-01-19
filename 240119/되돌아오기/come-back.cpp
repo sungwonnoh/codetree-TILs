@@ -9,7 +9,7 @@ int main() {
     int answer = -1;
     
     cin >> n;
-    cin.ignore(); 
+    //cin.ignore(); 
 
     for (int i = 0; i < n; i++) {
         cin >> d >> s;
