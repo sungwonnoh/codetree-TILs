@@ -13,7 +13,7 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         cin >> d >> s;
-        cin.ignore();
+        //cin.ignore();
 
         if (d == 'E') {
             dir = 0;
