@@ -1,12 +1,9 @@
 #include <iostream>
 using namespace std;
-
 int n, m;
-
 bool inRange(int x, int y) {
     return 0 <= x && x < n && 0 <= y && y < m;
 }
-
 int main() {
     cin >> n >> m;
     int arr[101][101] = {};
