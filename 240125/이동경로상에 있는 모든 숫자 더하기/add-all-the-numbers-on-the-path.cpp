@@ -4,8 +4,8 @@ using namespace std;
 
 int n,t;
 int arr[100][100]={};
-int dx[4]={1,0,-1,0};
-int dy[4]={0,-1,0,1};
+int dx[4] = {-1, 0, 1, 0};
+int dy[4] = {0, -1, 0, 1};
 bool inRange(int x, int y) {
     return x >= 0 && x < n && y >= 0 && y < n;
 }
@@ -21,7 +21,7 @@ int main() {
         }
     }
 
-    int now=3;
+    int now=0;
     int x=n/2;
     int y=n/2;
     int cnt = arr[x][y];
