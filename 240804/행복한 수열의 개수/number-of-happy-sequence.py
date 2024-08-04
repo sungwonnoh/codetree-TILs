@@ -19,7 +19,7 @@ for i in range(n):
     col=[]
     for j in range(n):
         row.append(arr[i][j])
-        col.append(arr[i][j])
+        col.append(arr[j][i])
     ans_row=happy(row)
     ans_col=happy(col)
 
